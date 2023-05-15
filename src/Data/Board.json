@@ -1,0 +1,330 @@
+[
+  [
+    {
+      "Card": "Wild",
+      "Occupied": true,
+      "OccupiedBy": 2
+    },
+    {
+      "Card": "2S"
+    },
+    {
+      "Card": "3S"
+    },
+    {
+      "Card": "4S"
+    },
+    {
+      "Card": "5S"
+    },
+    {
+      "Card": "6S"
+    },
+    {
+      "Card": "7S"
+    },
+    {
+      "Card": "8S"
+    },
+    {
+      "Card": "9S"
+    },
+    {
+      "Card": "Wild",
+      "Occupied": true,
+      "OccupiedBy": 2
+    }
+  ],
+  [
+    {
+      "Card": "6C"
+    },
+    {
+      "Card": "5C"
+    },
+    {
+      "Card": "4C"
+    },
+    {
+      "Card": "3C"
+    },
+    {
+      "Card": "2C"
+    },
+    {
+      "Card": "AH"
+    },
+    {
+      "Card": "KH"
+    },
+    {
+      "Card": "QH"
+    },
+    {
+      "Card": "10H"
+    },
+    {
+      "Card": "10S"
+    }
+  ],
+  [
+    {
+      "Card": "7C"
+    },
+    {
+      "Card": "AS"
+    },
+    {
+      "Card": "2D"
+    },
+    {
+      "Card": "3D"
+    },
+    {
+      "Card": "4D"
+    },
+    {
+      "Card": "5D"
+    },
+    {
+      "Card": "6D"
+    },
+    {
+      "Card": "7D"
+    },
+    {
+      "Card": "9H"
+    },
+    {
+      "Card": "QS"
+    }
+  ],
+  [
+    {
+      "Card": "8C"
+    },
+    {
+      "Card": "KS"
+    },
+    {
+      "Card": "6C"
+    },
+    {
+      "Card": "5C"
+    },
+    {
+      "Card": "4C"
+    },
+    {
+      "Card": "3C"
+    },
+    {
+      "Card": "2C"
+    },
+    {
+      "Card": "8D"
+    },
+    {
+      "Card": "8H"
+    },
+    {
+      "Card": "KS"
+    }
+  ],
+  [
+    {
+      "Card": "9C"
+    },
+    {
+      "Card": "QS"
+    },
+    {
+      "Card": "7C"
+    },
+    {
+      "Card": "6H"
+    },
+    {
+      "Card": "5H"
+    },
+    {
+      "Card": "4H"
+    },
+    {
+      "Card": "AH"
+    },
+    {
+      "Card": "9D"
+    },
+    {
+      "Card": "7H"
+    },
+    {
+      "Card": "AS"
+    }
+  ],
+  [
+    {
+      "Card": "10C"
+    },
+    {
+      "Card": "10S"
+    },
+    {
+      "Card": "9C"
+    },
+    {
+      "Card": "7H"
+    },
+    {
+      "Card": "2H"
+    },
+    {
+      "Card": "3H"
+    },
+    {
+      "Card": "KH"
+    },
+    {
+      "Card": "10D"
+    },
+    {
+      "Card": "6H"
+    },
+    {
+      "Card": "2D"
+    }
+  ],
+  [
+    {
+      "Card": "QC"
+    },
+    {
+      "Card": "9S"
+    },
+    {
+      "Card": "9C"
+    },
+    {
+      "Card": "8H"
+    },
+    {
+      "Card": "9H"
+    },
+    {
+      "Card": "10H"
+    },
+    {
+      "Card": "QH"
+    },
+    {
+      "Card": "QD"
+    },
+    {
+      "Card": "5H"
+    },
+    {
+      "Card": "3D"
+    }
+  ],
+  [
+    {
+      "Card": "KC"
+    },
+    {
+      "Card": "8S"
+    },
+    {
+      "Card": "10C"
+    },
+    {
+      "Card": "QC"
+    },
+    {
+      "Card": "KC"
+    },
+    {
+      "Card": "AC"
+    },
+    {
+      "Card": "AD"
+    },
+    {
+      "Card": "KD"
+    },
+    {
+      "Card": "4H"
+    },
+    {
+      "Card": "4D"
+    }
+  ],
+  [
+    {
+      "Card": "AC"
+    },
+    {
+      "Card": "7S"
+    },
+    {
+      "Card": "6S"
+    },
+    {
+      "Card": "5S"
+    },
+    {
+      "Card": "4S"
+    },
+    {
+      "Card": "3S"
+    },
+    {
+      "Card": "2S"
+    },
+    {
+      "Card": "2H"
+    },
+    {
+      "Card": "3H"
+    },
+    {
+      "Card": "5D"
+    }
+  ],
+  [
+    {
+      "Card": "Wild",
+      "Occupied": true,
+      "OccupiedBy": 2
+    },
+    {
+      "Card": "AD"
+    },
+    {
+      "Card": "KD"
+    },
+    {
+      "Card": "QD"
+    },
+    {
+      "Card": "10D"
+    },
+    {
+      "Card": "9D"
+    },
+    {
+      "Card": "8D"
+    },
+    {
+      "Card": "7D"
+    },
+    {
+      "Card": "6D"
+    },
+    {
+      "Card": "Wild",
+      "Occupied": true,
+      "OccupiedBy": 2
+    }
+  ]
+]
