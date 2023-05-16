@@ -2,8 +2,7 @@
   [
     {
       "Card": "Wild",
-      "Occupied": true,
-      "OccupiedBy": 2
+      "Occupied": true
     },
     {
       "Card": "2S"
@@ -31,8 +30,7 @@
     },
     {
       "Card": "Wild",
-      "Occupied": true,
-      "OccupiedBy": 2
+      "Occupied": true
     }
   ],
   [
@@ -294,8 +292,7 @@
   [
     {
       "Card": "Wild",
-      "Occupied": true,
-      "OccupiedBy": 2
+      "Occupied": true
     },
     {
       "Card": "AD"
@@ -323,8 +320,7 @@
     },
     {
       "Card": "Wild",
-      "Occupied": true,
-      "OccupiedBy": 2
+      "Occupied": true
     }
   ]
 ]

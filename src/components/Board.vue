@@ -28,10 +28,20 @@ export default defineComponent({
     justify-content: space-between;
     align-content: space-between;
 
-    .tile{
-        display: block;
-        padding: 15px;
+    .tile-wrapper{
+        display:flex;
+        align-items: center;
+        width:100%;
+    }
 
+    .tile{
+        width: 100%;
+        display: block;
+        padding: 1rem;
+        border: 1px solid white;
+        border-radius: .25rem;
+        margin: .25rem;
+        text-align: center;
     }
 }
 
