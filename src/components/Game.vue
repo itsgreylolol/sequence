@@ -53,7 +53,7 @@ export default defineComponent({
                     }
                 }
             } else {
-                // TODO: match 10 + named cards
+                // TODO: match named cards
                 const suitLetter = tile.Card?.charAt(tile.Card.length - 1)
                 const cardNumber =  parseInt([...tile.Card ?? ""].filter(c => c !== suitLetter).toString());
                 const suit = Object.keys(Suit).find(s => s.startsWith(suitLetter))

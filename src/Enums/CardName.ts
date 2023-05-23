@@ -8,7 +8,7 @@ export enum CardName {
   Seven = 7,
   Eight = 8,
   Nine = 9,
-  Ten = 10,
+  Ten = 1,
   Queen = 12,
   Jack = 13,
   King = 14
