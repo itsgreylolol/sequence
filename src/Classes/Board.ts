@@ -1,5 +1,5 @@
 import { v4 as uuid4 } from 'uuid'
-import { Tile } from './Tile'
+import { Tile } from '@/Classes'
 import BoardJson from '../Data/Board.json'
 
 export class Board {

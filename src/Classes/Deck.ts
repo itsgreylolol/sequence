@@ -10,27 +10,31 @@ export class Deck {
     for (let _ of [0, 1]) {
       for (let suit in Object.keys(Suit)) {
         for (let name in Object.keys(CardName)) {
-          this.Cards.push(
-            new Card(
-              Number(CardName[name as keyof typeof CardName]),
-              Number(Suit[suit as keyof typeof Suit])
-            )
+          const card = new Card(
+            CardName[name as keyof typeof CardName],
+            Suit[suit as keyof typeof Suit]
           )
+          if (card && card.Name && card.Suit) {
+            this.Cards.push(card)
+          }
         }
       }
     }
+
+    this.shuffle()
   }
 
   shuffle = () => {
-    let currentIndex = this.Cards.length
+    let currentIndex = this.Cards.length - 1
     let randomIndex
 
-    while (currentIndex != 0) {
+    while (currentIndex > 0) {
       randomIndex = Math.floor(Math.random() * currentIndex)
-      ;[this.Cards[currentIndex], this.Cards[randomIndex]] = [
-        this.Cards[randomIndex],
-        this.Cards[currentIndex]
-      ]
+      const temp = this.Cards[currentIndex]
+      this.Cards[currentIndex] = this.Cards[randomIndex]
+      this.Cards[randomIndex] = temp
+
+      currentIndex--
     }
   }
 }

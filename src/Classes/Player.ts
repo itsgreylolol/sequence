@@ -4,6 +4,7 @@ import type { Card } from './Card'
 export class Player {
   Id: string
   Hand: Card[]
+  Playing: boolean = false;
 
   constructor() {
     this.Id = uuid4()

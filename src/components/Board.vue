@@ -3,6 +3,7 @@ import { defineComponent } from 'vue';
 import { Board } from '@/Classes/Board';
 
 export default defineComponent({
+    emits: ['play'],
     data(){
         return{
             board: new Board()
@@ -12,16 +13,22 @@ export default defineComponent({
 </script>
 
 <template>
-    <div v-for="row in board" class="tile-row">
-        <div v-for="tiles in row">
-            <div v-for="tile in tiles" class="tile-wrapper">
-                <span v-text="tile.Card" class="tile"></span>
+    <div class="board-wrapper">
+        <div v-for="row in board" class="tile-row">
+            <div v-for="tiles in row">
+                <div v-for="tile in tiles" class="tile-wrapper" :key="tile.Id">
+                    <span v-text="tile.Card" class="tile" @click="$emit('play', tile.Card)"></span>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+.board-wrapper{
+    width: 100%;
+    height: 100vh;
+}
 .tile-row{
     width: 100%;
     display: flex;

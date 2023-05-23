@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Board from './components/Board.vue';
+import Game from './components/Game.vue';
 </script>
 
 <template>
   <main>
-    <Board />
+    <Game />
   </main>
 </template>
 
@@ -12,5 +12,6 @@ import Board from './components/Board.vue';
 
 main{
   margin: 0 auto;
+  height:100vh;
 }
 </style>
