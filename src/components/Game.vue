@@ -44,6 +44,7 @@ export default defineComponent({
                 if (tile.OccupiedBy == player.Id){
                     this.message = 'Cannot play on your own tile'
                 } else {
+                    // TODO: jack matching is broken
                     const removal = player.Hand.find(c => c.Name == 13 && (c.Suit == 0 || c.Suit == 1));
                     if (!removal){
                         this.message = 'Cannot remove opponent tile without a removal Jack';
@@ -52,12 +53,14 @@ export default defineComponent({
                     }
                 }
             } else {
+                // TODO: match 10 + named cards
                 const suitLetter = tile.Card?.charAt(tile.Card.length - 1)
                 const cardNumber =  parseInt([...tile.Card ?? ""].filter(c => c !== suitLetter).toString());
                 const suit = Object.keys(Suit).find(s => s.startsWith(suitLetter))
                 const handCard = player.Hand.find(c => CardName[c.Name as keyof typeof CardName] === cardNumber && c.Suit === suit);
 
                 if(!handCard){
+                    // TODO: jack matching is broken
                     const wild = player.Hand.find(c => c.Name == 13 && (c.Suit == 2 || c.Suit == 3));
                     if (!wild){
                         this.message = 'You cannot play that card, you do not have it in your hand'
