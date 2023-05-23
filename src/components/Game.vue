@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent} from 'vue';
-import { Deck, Player, Board, Tile } from '@/Classes';
+import { Deck, Player, Board, Tile, Card } from '@/Classes';
 import { CardName, Suit } from '@/Enums';
 
 export default defineComponent({
@@ -20,6 +20,23 @@ export default defineComponent({
                 player.Hand.push(card)
             }
         },
+        updateHand(player: Player, tile: Tile, card: Card){
+            const index = player.Hand.findIndex(c => c === card);
+            player.Hand.value = player.Hand.splice(index, 1);
+            this.draw(player);
+            this.player1.Playing = !this.player1.Playing
+            this.player2.Playing = !this.player2.Playing
+
+            const liveTile = this.board.Tiles.find(r => {
+                    return  r.find(t => {
+                    return t.Id == tile.Id
+                    })
+                })?.find(t => t.Id == tile.Id)
+            if (liveTile){
+                liveTile.Occupied = !liveTile.Occupied;
+                liveTile.OccupiedBy = liveTile.Occupied? player.Id : undefined;
+            }
+        },
         play(tile: Tile){
             this.message = ''
             const player = this.player1.Playing ? this.player1 : this.player2;
@@ -31,21 +48,7 @@ export default defineComponent({
                     if (!removal){
                         this.message = 'Cannot remove opponent tile without a removal Jack';
                     } else {
-                        const index = player.Hand.findIndex(c => c === removal);
-                        player.Hand = player.Hand.splice(index, 1);
-                        this.draw(player);
-                        this.player1.Playing = !this.player1.Playing
-                        this.player2.Playing = !this.player2.Playing
-
-                        const liveTile = this.board.Tiles.find(r => {
-                                return  r.find(t => {
-                                return t.Id == tile.Id
-                                })
-                            })?.find(t => t.Id == tile.Id)
-                        if (liveTile){
-                            liveTile.Occupied = !liveTile.Occupied;
-                            liveTile.OccupiedBy = !!removal ? undefined : player.Id;
-                        }
+                        this.updateHand(player, tile, removal);
                     }
                 }
             } else {
@@ -59,40 +62,11 @@ export default defineComponent({
                     if (!wild){
                         this.message = 'You cannot play that card, you do not have it in your hand'
                     } else {
-                        const index = player.Hand.findIndex(c => c === wild);
-                        player.Hand = player.Hand.splice(index, 1);
-                        this.draw(player);
-                        this.player1.Playing = !this.player1.Playing
-                        this.player2.Playing = !this.player2.Playing
-
-                        const liveTile = this.board.Tiles.find(r => {
-                                return  r.find(t => {
-                                    return t.Id == tile.Id
-                                })
-                            })?.find(t => t.Id == tile.Id)
-                        if (liveTile){
-                            liveTile.Occupied = true;
-                            liveTile.OccupiedBy = player.Id
-                        }
+                        this.updateHand(player, tile, wild);
                     }
                     
                 } else {
-                    const index = player.Hand.findIndex(c => c === handCard);
-                    player.Hand.value = player.Hand.splice(index, 1);
-                    this.draw(player);
-                    this.player1.Playing = !this.player1.Playing
-                    this.player2.Playing = !this.player2.Playing
-
-                    const liveTile = this.board.Tiles.find(r => {
-                        return  r.find(t => {
-                           return t.Id == tile.Id
-                        })
-                    })?.find(t => t.Id == tile.Id)
-
-                    if (liveTile){
-                        liveTile.Occupied = true;
-                        liveTile.OccupiedBy = player.Id
-                    }
+                    this.updateHand(player, tile, handCard);
                 }
             }
         }
